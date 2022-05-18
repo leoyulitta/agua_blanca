@@ -1,0 +1,207 @@
+/* reset*/
+*{
+    margin: 0;
+    padding: 0;
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100vw;
+    min-height: 100vh;
+    font-family: 'Roboto', sans-serif;
+}
+
+div.container{
+    width: 100vw;
+    height: 100vh;
+    background-color: #f3fcff;
+    display: grid;
+    grid-template-areas: "hdr"
+                         "nav"
+                         "main"
+                         "foo";
+    grid-template-rows: 2.37rem 2rem auto 16.625rem ;
+}
+
+header{
+    grid-area: hdr;
+    background-color: #051367;
+    text-align: center;
+}
+
+header h1{
+    font-size: 2rem;
+    text-transform: uppercase;
+    color: white;
+}
+
+nav{
+    grid-area: nav;
+}
+
+nav ul.menuPrincipal{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    list-style-type: none;
+    background-color: #051367;
+    align-items: center;
+    border-top: 1px solid white;
+    height: 100%;
+}
+
+nav ul.menuPrincipal li{
+    height: 100%;
+}
+
+nav ul.menuPrincipal li a{
+    display: inline-block;
+    text-decoration: none;
+    color: whitesmoke;
+    text-transform: uppercase;
+    font-size: 0.875rem;
+    height: 100%;
+    line-height: 2.2;
+    transition:all,0.3s;
+}
+
+nav ul.menuPrincipal li a:hover{
+    transform: translateY(1rem);
+    color:yellow;
+}
+
+main{
+    min-width: 100vw;
+    font-size: 1.2rem;
+}
+
+/* estilos galeria */
+
+main section.seccionPrincipalTres{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main section.seccionPrincipalTres div.izquierda{
+    width: 100%;
+    margin: 0.625rem 0.31rem 0.625rem 0.31rem;
+}
+
+main section.seccionPrincipalTres div.izquierda img{
+    width: 100%;
+    display: block; 
+    border: 1px solid blue;
+}
+
+/* fin estilos galeria */
+
+main img.portada{
+    max-width: 100%;
+    display: block;
+    margin: 0 auto 0 auto;
+}
+
+footer{
+    grid-area: foo;
+    background-color: #051367;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: stretch;
+}
+
+footer ul.ulFooter{
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 0.5rem;
+}
+
+footer ul.ulFooter li{
+    margin: 0.625rem;
+}
+
+footer ul.ulFooter li a{
+    text-decoration: none;
+    font-size: 0.625rem;
+    font-weight: lighter;
+    color: antiquewhite;
+}
+
+footer ul.ulFooter li a i{
+    font-size: 3rem;
+}
+
+footer h2,h3{
+    font-size: 0.5rem;
+    color: antiquewhite;
+    font-weight: lighter;
+}
+
+footer iframe{
+    margin-top: 1rem;
+    width: 50%;
+    height: 50%;
+    align-self: center;
+}
+
+
+/* M Q */
+
+@media screen and (min-width:1024px) {
+    
+    div.container{
+        background-color: white;
+    }
+
+    header h1{
+        font-size: 3rem;
+        line-height: 1;
+    }
+
+    div.container{
+        grid-template-areas: "hdr hdr hdr hdr"
+                             "nav nav nav nav"
+                             "main main main main"
+                             "foo foo foo foo";
+
+        grid-template-rows: 3.12rem 3rem auto 9.37rem ;
+    }
+
+    main section.seccionPrincipalTres{
+        flex-direction: row;
+        align-items: center;
+        height: 60vh;
+        flex-wrap: wrap;
+        justify-content: center;
+        overflow:auto;
+        row-gap: 0.9rem;
+        column-gap: 0.7rem;
+    }
+
+    nav ul.menuPrincipal li a{
+        font-size: 1rem;
+        line-height: 3;
+    }
+
+    main section.seccionPrincipalTres div.izquierda{
+        width: 23vw;
+        margin: 0.625rem 0.31rem 0.625rem 0.31rem;
+    }
+
+    footer{
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    footer iframe{
+        width: 40%;
+        height: 80%;
+        align-self: stretch;
+    }
+}
