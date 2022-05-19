@@ -74,6 +74,7 @@ nav ul.menuPrincipal li a:hover{
 main{
     min-width: 100vw;
     font-size: 1.2rem;
+    position: relative;
 }
 
 /* estilos galeria */
@@ -97,10 +98,29 @@ main section.seccionPrincipalTres div.izquierda img{
 
 /* fin estilos galeria */
 
-main img.portada{
+main img.img{
     max-width: 100%;
     display: block;
     margin: 0 auto 0 auto;
+}
+
+img.portadaDos{
+    opacity: 1;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    z-index: 12;
+    animation: foto 5s ease-in-out 2s 1 normal forwards;
+}
+
+@keyframes foto {
+    from{
+        opacity: 1;
+    }
+    
+    to{
+        opacity: 0;
+    }
 }
 
 footer{
@@ -170,6 +190,10 @@ footer iframe{
                              "foo foo foo foo";
 
         grid-template-rows: 3.12rem 3rem auto 9.37rem ;
+    }
+
+    main img.portadaDos{
+        left: 10.5%;
     }
 
     main section.seccionPrincipalTres{
