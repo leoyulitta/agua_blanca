@@ -12,10 +12,10 @@ body{
     font-family: 'Roboto', sans-serif;
 }
 
+/* contenedor principal */
+
 div.containerPrincipal{
     width: 100vw;
-    height: 100vh;
-    /* background-color: #f3fcff; */
     background-color: white;
     display: grid;
     grid-template-areas: "hdr"
@@ -24,6 +24,10 @@ div.containerPrincipal{
                          "foo";
     grid-template-rows: 2.37rem 2rem auto 16.625rem ;
 }
+
+/* fin contenedor principal */
+
+/* header */
 
 header{
     grid-area: hdr;
@@ -35,7 +39,12 @@ header h1{
     font-size: 2rem;
     text-transform: uppercase;
     color: white;
+    margin: 0;
 }
+
+/* fin header */
+
+/* menu nav */
 
 nav{
     grid-area: nav;
@@ -69,9 +78,12 @@ nav ul.menuPrincipal li a{
 }
 
 nav ul.menuPrincipal li a:hover{
-    /* transform: translateY(1rem); */
     color:yellow;
 }
+
+/* fin menu nav */
+
+/* main */
 
 main{
     min-width: 100vw;
@@ -79,27 +91,21 @@ main{
     position: relative;
 }
 
+/* fin main */
+
 /* estilos galeria */
 
 main section.seccionPrincipalTres{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    width: 100vw;
 }
 
 .container-fluid{
-    width: 100%;
     padding: 0;
 }
 
-#carouselExampleControls{
-    width: 100%;
-}
-
-.imgcar{
-    width: 80%;
-}
 /* fin estilos galeria */
+
+/* contenido main index */
 
 main img.img{
     max-width: 100%;
@@ -125,6 +131,10 @@ img.portadaDos{
         opacity: 0;
     }
 }
+
+/* fin contenido main index */
+
+/* contenido footer */
 
 footer{
     grid-area: foo;
@@ -177,6 +187,8 @@ footer iframe{
     align-self: center;
 }
 
+/* fin contenido footer */
+
 
 /* M Q */
 
@@ -185,12 +197,10 @@ footer iframe{
     div.containerPrincipal{
         background-color: white;
     }
-
     header h1{
         font-size: 3rem;
         line-height: 1;
     }
-
     div.containerPrincipal{
         grid-template-areas: "hdr hdr hdr hdr"
                              "nav nav nav nav"
@@ -199,54 +209,19 @@ footer iframe{
 
         grid-template-rows: 3.12rem 3rem auto 9.37rem ;
     }
-
     main img.portadaDos{
         left: 10.5%;
     }
-
     main section.seccionPrincipalTres{
-        flex-direction: row;
-        align-items: center;
-        height: 60vh;
-        flex-wrap: wrap;
-        justify-content: center;
-        overflow:auto;
-        row-gap: 0.9rem;
-        column-gap: 0.7rem;
+        width: 50vw;
+        margin: 0 auto 0 auto;
     }
-
     nav ul.menuPrincipal li a{
         font-size: 1rem;
         line-height: 3;
     }
-
-    .container-fluid{
-        height: 100%;
-        display: flex;
-        justify-content: center;
-    }
-    
-    #carouselExampleControls, .carousel-inner{
-        width: 50%;
-    }
-    #carouselExampleControls{
-        display: flex;
-        justify-content: center;
-    }
-    .carousel-inner{
-        height: 100%;
-        width: 100%;
-        margin: 0;
-        display: flex;
-        /* justify-content:space-around; */
-        align-items: center;
-    }
-    .carousel-item{
-        width:  100%;
-        height: 100%;
-    }
-    .imgcar{
-        width: 60%;
+    .img-fluid{
+        width: 80%;
     }
     footer{
         flex-direction: row;
