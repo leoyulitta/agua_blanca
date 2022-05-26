@@ -222,6 +222,7 @@ footer iframe{
     }
     .img-fluid{
         width: 80%;
+        margin: 0 auto 0 auto;
     }
     footer{
         flex-direction: row;
