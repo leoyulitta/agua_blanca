@@ -22,7 +22,7 @@ div.containerPrincipal{
                          "nav"
                          "main"
                          "foo";
-    grid-template-rows: 2.37rem 2rem auto 16.625rem ;
+    grid-template-rows: 2.37rem 3rem auto 16.625rem ;
 }
 
 /* fin contenedor principal */
@@ -46,11 +46,26 @@ header h1{
 
 /* menu nav */
 
-nav{
+.barramenu{
     grid-area: nav;
+    padding: 0;
 }
 
-nav ul.menuPrincipal{
+#menuGrande{
+    grid-area: nav;
+    display: none;
+}
+.botonMenu{
+    margin-left: 10%;
+    background-color: #051367;
+}
+.iconMenu{
+    background-color: white;
+}
+.offcanvas{
+    max-width: 50%;
+}
+/* nav ul.menuPrincipal{
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
@@ -79,7 +94,7 @@ nav ul.menuPrincipal li a{
 
 nav ul.menuPrincipal li a:hover{
     color:yellow;
-}
+} */
 
 /* fin menu nav */
 
@@ -216,9 +231,38 @@ footer iframe{
         width: 50vw;
         margin: 0 auto 0 auto;
     }
+    .barramenu{
+        display: none;
+    }
+    #menuGrande{
+        display: block;
+    }
+    nav ul.menuPrincipal{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        list-style-type: none;
+        background-color: #051367;
+        align-items: center;
+        border-top: 1px solid white;
+        height: 100%;
+        padding: 0;
+    }
+    nav ul.menuPrincipal li{
+        height: 100%;
+    }
     nav ul.menuPrincipal li a{
+        display: inline-block;
+        text-decoration: none;
+        color: whitesmoke;
+        text-transform: uppercase;
         font-size: 1rem;
+        height: 100%;
         line-height: 3;
+        transition:all,0.3s;
+    }
+    nav ul.menuPrincipal li a:hover{
+        color:yellow;
     }
     .img-fluid{
         width: 80%;
