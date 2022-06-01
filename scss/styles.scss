@@ -1,2 +1,98 @@
 //imports 
-@import "utilities/_variables";
+@import "utilities/variables";
+@import "utilities/colores";
+@import "utilities/estructura";
+@import "utilities/tipografia";
+
+
+@keyframes foto {
+    from{
+        opacity: 1;
+    }
+    
+    to{
+        opacity: 0;
+    }
+}
+
+@media screen and (min-width:1024px) {
+    body{
+        .containerPrincipal{
+            grid-template-areas: "hdr hdr hdr hdr"
+                                 "nav nav nav nav"
+                                 "main main main main"
+                                 "foo foo foo foo";
+            grid-template-rows: 3.12rem 3rem auto 9.37rem ;
+            background-color: white;
+            header{
+                h1{
+                    font-size: 3rem;
+                    line-height: 1;
+                }
+            }
+            .barramenu{
+                display: none;
+            }
+            #menuGrande{
+                display: block;
+                .menuPrincipal{
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-evenly;
+                    list-style-type: none;
+                    background-color: #051367;
+                    align-items: center;
+                    border-top: 1px solid white;
+                    height: 100%;
+                    padding: 0;
+                    li{
+                        height: 100%;
+                        a{
+                            display: inline-block;
+                            text-decoration: none;
+                            color: whitesmoke;
+                            text-transform: uppercase;
+                            font-size: 1rem;
+                            height: 100%;
+                            line-height: 3;
+                            transition:all,0.3s;
+                            &:hover{
+                                color:yellow;
+                            }
+                        }
+                    }
+                }
+            }
+            main{
+                .portadaDos{
+                    left: 10.5%;
+                }
+                .seccionPrincipalTres{
+                    width: 50vw;
+                    margin: 0 auto 0 auto;
+                    .container-fluid{
+                        .img-fluid{
+                            width: 80%;
+                            margin: 0 auto 0 auto;
+                        }
+                    }
+                }
+            }
+            footer{
+                flex-direction: row;
+                justify-content: space-evenly;
+                align-items: center;
+                h2{
+                    margin-top: 0;
+                }
+                .ulFooter{
+                    margin: 0;
+                }
+                iframe{
+                    width: 40%;
+                    height: 80%;
+                }
+            }
+        }
+    }
+}

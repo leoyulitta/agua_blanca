@@ -1,0 +1,156 @@
+*reset {
+  margin: 0;
+  padding: 0;
+  font-size: 1rem;
+  box-sizing: border-box; }
+
+body {
+  width: 100vw;
+  min-height: 100vh;
+  font-family: Roboto, sans-serif; }
+  body .containerPrincipal {
+    width: 100vw;
+    background-color: white;
+    display: grid;
+    grid-template-areas: "hdr" "nav" "main" "foo";
+    grid-template-rows: 2.37rem 3rem auto 16.625rem; }
+    body .containerPrincipal header {
+      grid-area: hdr;
+      background-color: #051367;
+      text-align: center; }
+      body .containerPrincipal header h1 {
+        font-size: 2rem;
+        text-transform: uppercase;
+        color: white;
+        margin: 0; }
+    body .containerPrincipal .barramenu {
+      grid-area: nav;
+      padding: 0; }
+      body .containerPrincipal .barramenu .botonMenu {
+        margin-left: 10%;
+        background-color: #051367; }
+        body .containerPrincipal .barramenu .botonMenu .iconMenu {
+          background-color: white; }
+      body .containerPrincipal .barramenu .offcanvas {
+        max-width: 50%; }
+    body .containerPrincipal #menuGrande {
+      grid-area: nav;
+      display: none; }
+    body .containerPrincipal main {
+      min-width: 100vw;
+      font-size: 1.2rem;
+      position: relative; }
+      body .containerPrincipal main .img {
+        max-width: 100%;
+        display: block;
+        margin: 0 auto 0 auto; }
+      body .containerPrincipal main .portadaDos {
+        opacity: 1;
+        position: absolute;
+        top: 0%;
+        left: 0%;
+        z-index: 12;
+        animation: foto 5s ease-in-out 2s 1 normal forwards; }
+      body .containerPrincipal main .seccionPrincipalTres {
+        width: 100vw; }
+        body .containerPrincipal main .seccionPrincipalTres .container-fluid {
+          padding: 0; }
+    body .containerPrincipal footer {
+      grid-area: foo;
+      background-color: #051367;
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      align-items: stretch; }
+      body .containerPrincipal footer .ulFooter {
+        list-style-type: none;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin: 0.5rem 0 0 0;
+        padding: 0; }
+        body .containerPrincipal footer .ulFooter li {
+          margin: 0.625rem; }
+          body .containerPrincipal footer .ulFooter li a {
+            text-decoration: none;
+            font-size: 0.625rem;
+            font-weight: lighter;
+            color: antiquewhite; }
+            body .containerPrincipal footer .ulFooter li a i {
+              font-size: 3rem; }
+      body .containerPrincipal footer h2 {
+        margin-top: 0.5rem;
+        font-size: 0.5rem;
+        color: antiquewhite;
+        font-weight: lighter;
+        line-height: 1.5; }
+      body .containerPrincipal footer h3 {
+        font-size: 0.5rem;
+        color: antiquewhite;
+        font-weight: lighter;
+        line-height: 1.5; }
+      body .containerPrincipal footer iframe {
+        width: 50%;
+        height: 50%;
+        align-self: center; }
+
+@keyframes foto {
+  from {
+    opacity: 1; }
+  to {
+    opacity: 0; } }
+
+@media screen and (min-width: 1024px) {
+  body .containerPrincipal {
+    grid-template-areas: "hdr hdr hdr hdr" "nav nav nav nav" "main main main main" "foo foo foo foo";
+    grid-template-rows: 3.12rem 3rem auto 9.37rem;
+    background-color: white; }
+    body .containerPrincipal header h1 {
+      font-size: 3rem;
+      line-height: 1; }
+    body .containerPrincipal .barramenu {
+      display: none; }
+    body .containerPrincipal #menuGrande {
+      display: block; }
+      body .containerPrincipal #menuGrande .menuPrincipal {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        list-style-type: none;
+        background-color: #051367;
+        align-items: center;
+        border-top: 1px solid white;
+        height: 100%;
+        padding: 0; }
+        body .containerPrincipal #menuGrande .menuPrincipal li {
+          height: 100%; }
+          body .containerPrincipal #menuGrande .menuPrincipal li a {
+            display: inline-block;
+            text-decoration: none;
+            color: whitesmoke;
+            text-transform: uppercase;
+            font-size: 1rem;
+            height: 100%;
+            line-height: 3;
+            transition: all,0.3s; }
+            body .containerPrincipal #menuGrande .menuPrincipal li a:hover {
+              color: yellow; }
+    body .containerPrincipal main .portadaDos {
+      left: 10.5%; }
+    body .containerPrincipal main .seccionPrincipalTres {
+      width: 50vw;
+      margin: 0 auto 0 auto; }
+      body .containerPrincipal main .seccionPrincipalTres .container-fluid .img-fluid {
+        width: 80%;
+        margin: 0 auto 0 auto; }
+    body .containerPrincipal footer {
+      flex-direction: row;
+      justify-content: space-evenly;
+      align-items: center; }
+      body .containerPrincipal footer h2 {
+        margin-top: 0; }
+      body .containerPrincipal footer .ulFooter {
+        margin: 0; }
+      body .containerPrincipal footer iframe {
+        width: 40%;
+        height: 80%; } }
