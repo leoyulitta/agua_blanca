@@ -1,0 +1,20 @@
+@mixin flex($dir){
+    display: flex;
+    flex-direction: $dir;
+    @content;
+}
+
+%textoFooter{
+    font-size: 0.5rem;
+    color: antiquewhite;
+    font-weight: lighter;
+    line-height: 1.5;
+}
+
+$colores:(
+    blanco: #ffffff,
+    blancoantiguo: #faebd7,
+    azul: #051367,
+    blancosmoke: #f5f5f5,
+    amarillo: #ffff00,
+);

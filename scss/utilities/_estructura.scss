@@ -1,4 +1,6 @@
-*reset{
+@import "mixins_extends";
+
+*{
     margin:$m-reset;
     padding:$p-reset;
     font-size:$font-reset;
@@ -11,8 +13,8 @@ body{
     font-family: $f-family;
     .containerPrincipal{
         width: $width-vw;
-        background-color: white;
-        display:grid;
+        background-color: map-get($map: $colores, $key: blanco);
+        display: grid;
         grid-template-areas: "hdr"
                              "nav"
                              "main"
@@ -20,12 +22,13 @@ body{
         grid-template-rows: 2.37rem 3rem auto 16.625rem;
         header{
             grid-area: hdr;
-            background-color: #051367;
+            background-color: map-get($map: $colores, $key: azul);
             text-align: center;
             h1{
                 font-size: 2rem;
+                font-weight:900;
                 text-transform: uppercase;
-                color: white;
+                color: map-get($map: $colores, $key: blanco);
                 margin: 0;
             }
         }
@@ -34,9 +37,9 @@ body{
             padding: 0;
             .botonMenu{
                 margin-left: 10%;
-                background-color: #051367;
+                background-color: map-get($map: $colores, $key: azul);
                 .iconMenu{
-                    background-color: white;
+                    background-color: map-get($map: $colores, $key: blanco);
                 }
             }
             .offcanvas{
@@ -48,7 +51,7 @@ body{
             display: none;
         }
         main{
-            min-width: 100vw;
+            min-width: $width-vw;
             font-size: 1.2rem;
             position: relative;
             .img{
@@ -73,16 +76,11 @@ body{
         }
         footer{
             grid-area: foo;
-            background-color: #051367;
-            display: flex;
-            flex-direction: column;
-            text-align: center;
-            align-items: stretch;
+            background-color: map-get($map: $colores, $key: azul);
+            @include flex(column){align-items: stretch; text-align: center};
             .ulFooter{
                 list-style-type: none;
-                display: flex;
-                flex-direction: row;
-                justify-content: center;
+                @include flex(row){justify-content: center};
                 margin: 0.5rem 0 0 0;
                 padding: 0;
                 li{
@@ -91,7 +89,7 @@ body{
                         text-decoration: none;
                         font-size: 0.625rem;
                         font-weight: lighter;
-                        color: antiquewhite;
+                        color: map-get($map: $colores, $key: blancoantiguo);
                         i{
                             font-size: 3rem;  
                         }
@@ -100,16 +98,11 @@ body{
             }
             h2{
                 margin-top: 0.5rem;
-                font-size: 0.5rem;
-                color: antiquewhite;
-                font-weight: lighter;
-                line-height: 1.5;
+                @extend %textoFooter;
             }
             h3{
                 font-size: 0.5rem;
-                color: antiquewhite;
-                font-weight: lighter;
-                line-height: 1.5
+                @extend %textoFooter;
             }
             iframe{
                 width: 50%;
