@@ -98,6 +98,12 @@ body {
               margin-bottom: 1rem; }
             body .containerPrincipal main .seccionPrincipalTips .cf-uno .card .card-body .card-text {
               text-align: justify; }
+      body .containerPrincipal main .seccionPrincipalContacto .container-fluid form {
+        padding: 0.5rem;
+        border: 1px solid #e2e1e1; }
+        body .containerPrincipal main .seccionPrincipalContacto .container-fluid form h4 {
+          text-align: center;
+          margin-bottom: 1rem; }
     body .containerPrincipal footer {
       grid-area: foo;
       background-color: #051367;
@@ -223,6 +229,14 @@ body .containerPrincipal footer h2, body .containerPrincipal footer h3 {
         flex-direction: column;
         justify-content: center;
         align-items: center; }
+    body .containerPrincipal main .seccionPrincipalContacto .container-fluid form {
+      width: 30vw;
+      margin: 1rem auto 2rem auto;
+      padding: 1rem;
+      border: 1px solid #e2e1e1; }
+      body .containerPrincipal main .seccionPrincipalContacto .container-fluid form h4 {
+        text-align: center;
+        margin-bottom: 1rem; }
     body .containerPrincipal footer {
       display: flex;
       flex-direction: row;
