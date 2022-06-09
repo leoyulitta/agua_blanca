@@ -4,46 +4,57 @@
 @import "utilities/mixins_extends";
 
 @keyframes foto {
-    from{
+    from {
         opacity: 1;
     }
-    
-    to{
+
+    to {
         opacity: 0;
     }
 }
 
 @media screen and (min-width:1024px) {
-    body{
-        .containerPrincipal{
+    body {
+        .containerPrincipal {
             grid-template-areas: "hdr hdr hdr hdr"
-                                 "nav nav nav nav"
-                                 "main main main main"
-                                 "foo foo foo foo";
-            grid-template-rows: 3.12rem 3rem auto 9.37rem ;
+                "nav nav nav nav"
+                "main main main main"
+                "foo foo foo foo";
+            grid-template-rows: 3.12rem 3rem auto 9.37rem;
             background-color: map-get($map: $colores, $key: blanco);
-            header{
-                h1{
+
+            header {
+                h1 {
                     font-size: 3rem;
                     line-height: 1;
                 }
             }
-            .barramenu{
+
+            .barramenu {
                 display: none;
             }
-            #menuGrande{
+
+            #menuGrande {
                 display: block;
-                .menuPrincipal{
-                    @include flex(row){justify-content: center; align-items: center;};
+
+                .menuPrincipal {
+                    @include flex(row) {
+                        justify-content: center;
+                        align-items: center;
+                    }
+
+                    ;
                     list-style-type: none;
                     background-color: map-get($map: $colores, $key: azul);
                     border-top: 1px solid map-get($map: $colores, $key: blanco);
                     height: 100%;
                     padding: 0;
-                    li{
+
+                    li {
                         height: 100%;
                         margin: 0 1.25rem 0 1.25rem;
-                        a{
+
+                        a {
                             display: inline-block;
                             text-decoration: none;
                             color: map-get($map: $colores, $key: blancosmoke);
@@ -51,52 +62,75 @@
                             font-size: 1rem;
                             height: 100%;
                             line-height: 3;
-                            transition:all,0.3s;
-                            &:hover{
+                            transition: all, 0.3s;
+
+                            &:hover {
                                 color: map-get($map: $colores, $key: amarillo);
                             }
                         }
                     }
                 }
             }
-            main{
-                .portadaDos{
+
+            main {
+                .portadaDos {
                     left: 10.5%;
                 }
-                .seccionPrincipalTres{
+
+                .seccionPrincipalTres {
                     width: 50vw;
                     margin: 0 auto 0 auto;
-                    .container-fluid{
-                        .img-fluid{
+
+                    .container-fluid {
+                        .img-fluid {
                             width: 80%;
                             margin: 0 auto 0 auto;
                         }
                     }
                 }
-                .seccionPrincipalNosotros{
-                    .container-fluid{
-                        @include flex(row){justify-content: space-around};
+
+                .seccionPrincipalNosotros {
+                    .cf-uno{
+                        display: none;
+                    }
+                    .cf-dos{
+                        display: block;
+                        @include flex(row){justify-content: center;};
                         .card{
-                            margin-top:1rem;
-                            width: 25rem;
-                            .card-body{
-                                .card-text{
-                                    text-align: justify;
+                            .row{
+                                .col-md-4{
+                                    img{
+                                        width: 80%;
+                                    }
+                                }
+                                .col-md-8{
+                                    .card-body{
+                                        @include flex(column){justify-content:center;align-items: center};  
+                                    }
                                 }
                             }
                         }
                     }
                 }
             }
-            footer{
-                @include flex(row){justify-content: space-evenly; align-items: center};
-                h2{
+
+            footer {
+                @include flex(row) {
+                    justify-content: space-evenly;
+                    align-items: center
+                }
+
+                ;
+
+                h2 {
                     margin-top: 0;
                 }
-                .ulFooter{
+
+                .ulFooter {
                     margin: 0;
                 }
-                iframe{
+
+                iframe {
                     width: 40%;
                     height: 80%;
                 }

@@ -75,8 +75,13 @@ body{
             }
             .seccionPrincipalNosotros{
                 width: $width-vw;
-                .container-fluid{
+                .cf-dos{
+                    display: none;
+                }
+                .cf-uno{
+                    display: block;
                     padding: 0;
+                    padding-bottom: 1rem;
                     .card{
                         width: $width-vw;
                         margin-top: 1rem;
