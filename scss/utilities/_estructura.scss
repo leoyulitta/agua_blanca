@@ -73,6 +73,28 @@ body{
                     padding: 0;
                 }
             }
+            .seccionPrincipalNosotros{
+                width: $width-vw;
+                .container-fluid{
+                    padding: 0;
+                    .card{
+                        width: $width-vw;
+                        margin-top: 1rem;
+                        img{
+                            display: none;
+                        }
+                        .card-body{
+                            .card-title{
+                                text-align: center;
+                                margin-bottom: 1rem;
+                            }
+                            .card-text{
+                                text-align: justify;
+                            }
+                        }
+                    }
+                }
+            }
         }
         footer{
             grid-area: foo;

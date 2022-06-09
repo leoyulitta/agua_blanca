@@ -73,6 +73,20 @@
                         }
                     }
                 }
+                .seccionPrincipalNosotros{
+                    .container-fluid{
+                        @include flex(row){justify-content: space-around};
+                        .card{
+                            margin-top:1rem;
+                            width: 25rem;
+                            .card-body{
+                                .card-text{
+                                    text-align: justify;
+                                }
+                            }
+                        }
+                    }
+                }
             }
             footer{
                 @include flex(row){justify-content: space-evenly; align-items: center};
