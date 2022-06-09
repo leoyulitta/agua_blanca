@@ -80,6 +80,24 @@ body {
               margin-bottom: 1rem; }
             body .containerPrincipal main .seccionPrincipalNosotros .cf-uno .card .card-body .card-text {
               text-align: justify; }
+      body .containerPrincipal main .seccionPrincipalTips {
+        width: 100vw; }
+        body .containerPrincipal main .seccionPrincipalTips .cf-dos {
+          display: none; }
+        body .containerPrincipal main .seccionPrincipalTips .cf-uno {
+          display: block;
+          padding: 0;
+          padding-bottom: 1rem; }
+          body .containerPrincipal main .seccionPrincipalTips .cf-uno .card {
+            width: 100vw;
+            margin-top: 1rem; }
+            body .containerPrincipal main .seccionPrincipalTips .cf-uno .card iframe {
+              height: 30rem; }
+            body .containerPrincipal main .seccionPrincipalTips .cf-uno .card .card-body .card-title {
+              text-align: center;
+              margin-bottom: 1rem; }
+            body .containerPrincipal main .seccionPrincipalTips .cf-uno .card .card-body .card-text {
+              text-align: justify; }
     body .containerPrincipal footer {
       grid-area: foo;
       background-color: #051367;
@@ -178,6 +196,29 @@ body .containerPrincipal footer h2, body .containerPrincipal footer h3 {
       body .containerPrincipal main .seccionPrincipalNosotros .cf-dos .card .row .col-md-4 img {
         width: 80%; }
       body .containerPrincipal main .seccionPrincipalNosotros .cf-dos .card .row .col-md-8 .card-body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center; }
+    body .containerPrincipal main .seccionPrincipalTips .cf-uno {
+      display: none; }
+    body .containerPrincipal main .seccionPrincipalTips .cf-dos {
+      display: block;
+      display: flex;
+      flex-direction: row;
+      justify-content: center; }
+      body .containerPrincipal main .seccionPrincipalTips .cf-dos .card .row .col-md-5 {
+        position: relative;
+        height: 0;
+        padding-bottom: 30%;
+        overflow: hidden; }
+        body .containerPrincipal main .seccionPrincipalTips .cf-dos .card .row .col-md-5 iframe {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%; }
+      body .containerPrincipal main .seccionPrincipalTips .cf-dos .card .row .col-md-7 .card-body {
         display: flex;
         flex-direction: column;
         justify-content: center;

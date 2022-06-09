@@ -100,6 +100,34 @@ body{
                     }
                 }
             }
+
+            .seccionPrincipalTips{
+                width: $width-vw;
+                .cf-dos{
+                    display: none;
+                }
+                .cf-uno{
+                    display: block;
+                    padding: 0;
+                    padding-bottom: 1rem;
+                    .card{
+                        width: $width-vw;
+                        margin-top: 1rem;
+                        iframe{
+                            height: 30rem;
+                        }
+                        .card-body{
+                            .card-title{
+                                text-align: center;
+                                margin-bottom: 1rem;
+                            }
+                            .card-text{
+                                text-align: justify;
+                            }
+                        }
+                    }
+                }
+            }
         }
         footer{
             grid-area: foo;
