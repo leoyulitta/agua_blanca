@@ -19,7 +19,7 @@ body{
                              "nav"
                              "main"
                              "foo";
-        grid-template-rows: 2.37rem 3rem auto 16.625rem;
+        grid-template-rows: 2.37rem 3rem auto 17rem;
         header{
             grid-area: hdr;
             background-color: map-get($map: $colores, $key: azul);
@@ -30,6 +30,9 @@ body{
                 text-transform: uppercase;
                 color: map-get($map: $colores, $key: blanco);
                 margin: 0;
+            }
+            #menuGrande{
+                display: none;
             }
         }
         .barramenu{
@@ -46,26 +49,26 @@ body{
                 max-width: 50%;
             }
         }
-        #menuGrande{
-            grid-area: nav;
-            display: none;
-        }
         main{
             min-width: $width-vw;
             font-size: 1.2rem;
             position: relative;
+            .whatsapp-icon{
+                max-width: 3rem;
+                max-height: 3rem;
+                position:fixed;
+                text-align: center;
+                bottom: 4rem;
+                right: 1rem;
+                z-index: 1000;
+                img{
+                    width: 100%;
+                }
+            }
             .img{
                 max-width: 100%;
                 display: block;
                 margin: 0 auto 0 auto;
-            }
-            .portadaDos{
-                opacity: 1;
-                position: absolute;
-                top: 0%;
-                left: 0%;
-                z-index: 12;
-                animation: foto 5s ease-in-out 2s 1 normal forwards;
             }
             .seccionPrincipalTres{
                 width: $width-vw;
@@ -112,9 +115,10 @@ body{
                     padding-bottom: 1rem;
                     .card{
                         width: $width-vw;
-                        margin-top: 1rem;
                         iframe{
-                            height: 30rem;
+                            margin: 0.625rem auto 0 auto;
+                            width: 85vw;
+                            height: 35vh;
                         }
                         .card-body{
                             .card-title{
@@ -129,15 +133,43 @@ body{
                 }
             }
             .seccionPrincipalContacto{
+                max-height: 70vh;
                 .container-fluid{
+                    max-height: 70vh;
                     form{
+                        overflow: scroll;
+                        max-height: 70vh;
                         padding: 0.5rem;
                         border: 1px solid rgb(226, 225, 225);
+                        margin-bottom: 1rem;
                         h4{
                             text-align: center;
                             margin-bottom: 1rem;
+                            font-size: 1rem;
+                        }
+                        .mb-3{
+                            label{
+                                font-size: 0.900rem;
+                            }
+                        }
+                        .botonesForm{
+                            margin-top: 0.700rem;
+                            button{
+                                width: 20%;
+                                height: 10%;
+                                font-size: 0.600rem;
+                            }
                         }
                     }
+                }
+            }
+        }
+        .mainIndex{
+            .imgIndexMobile{
+                display: block;
+                width: $width-vw;
+                img{
+                    width: 100%;
                 }
             }
         }
@@ -172,9 +204,10 @@ body{
                 @extend %textoFooter;
             }
             iframe{
-                width: 50%;
-                height: 50%;
+                width: 45%;
+                height: 45%;
                 align-self: center;
+                overflow: hidden;
             }
         }   
     }

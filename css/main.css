@@ -1,5 +1,5 @@
 body .containerPrincipal footer h2, body .containerPrincipal footer h3 {
-  font-size: 0.5rem;
+  font-size: 1rem;
   color: antiquewhite;
   font-weight: lighter;
   line-height: 1.5; }
@@ -19,10 +19,10 @@ body {
     background-color: #ffffff;
     display: grid;
     grid-template-areas: "hdr" "nav" "main" "foo";
-    grid-template-rows: 2.37rem 3rem auto 16.625rem; }
+    grid-template-rows: 2.37rem 3rem auto 17rem; }
     body .containerPrincipal header {
       grid-area: hdr;
-      background-color: #051367;
+      background-color: #02013E;
       text-align: center; }
       body .containerPrincipal header h1 {
         font-size: 2rem;
@@ -30,34 +30,36 @@ body {
         text-transform: uppercase;
         color: #ffffff;
         margin: 0; }
+      body .containerPrincipal header #menuGrande {
+        display: none; }
     body .containerPrincipal .barramenu {
       grid-area: nav;
       padding: 0; }
       body .containerPrincipal .barramenu .botonMenu {
         margin-left: 10%;
-        background-color: #051367; }
+        background-color: #02013E; }
         body .containerPrincipal .barramenu .botonMenu .iconMenu {
           background-color: #ffffff; }
       body .containerPrincipal .barramenu .offcanvas {
         max-width: 50%; }
-    body .containerPrincipal #menuGrande {
-      grid-area: nav;
-      display: none; }
     body .containerPrincipal main {
       min-width: 100vw;
       font-size: 1.2rem;
       position: relative; }
+      body .containerPrincipal main .whatsapp-icon {
+        max-width: 3rem;
+        max-height: 3rem;
+        position: fixed;
+        text-align: center;
+        bottom: 4rem;
+        right: 1rem;
+        z-index: 1000; }
+        body .containerPrincipal main .whatsapp-icon img {
+          width: 100%; }
       body .containerPrincipal main .img {
         max-width: 100%;
         display: block;
         margin: 0 auto 0 auto; }
-      body .containerPrincipal main .portadaDos {
-        opacity: 1;
-        position: absolute;
-        top: 0%;
-        left: 0%;
-        z-index: 12;
-        animation: foto 5s ease-in-out 2s 1 normal forwards; }
       body .containerPrincipal main .seccionPrincipalTres {
         width: 100vw; }
         body .containerPrincipal main .seccionPrincipalTres .container-fluid {
@@ -89,24 +91,46 @@ body {
           padding: 0;
           padding-bottom: 1rem; }
           body .containerPrincipal main .seccionPrincipalTips .cf-uno .card {
-            width: 100vw;
-            margin-top: 1rem; }
+            width: 100vw; }
             body .containerPrincipal main .seccionPrincipalTips .cf-uno .card iframe {
-              height: 30rem; }
+              margin: 0.625rem auto 0 auto;
+              width: 85vw;
+              height: 35vh; }
             body .containerPrincipal main .seccionPrincipalTips .cf-uno .card .card-body .card-title {
               text-align: center;
               margin-bottom: 1rem; }
             body .containerPrincipal main .seccionPrincipalTips .cf-uno .card .card-body .card-text {
               text-align: justify; }
-      body .containerPrincipal main .seccionPrincipalContacto .container-fluid form {
-        padding: 0.5rem;
-        border: 1px solid #e2e1e1; }
-        body .containerPrincipal main .seccionPrincipalContacto .container-fluid form h4 {
-          text-align: center;
-          margin-bottom: 1rem; }
+      body .containerPrincipal main .seccionPrincipalContacto {
+        max-height: 70vh; }
+        body .containerPrincipal main .seccionPrincipalContacto .container-fluid {
+          max-height: 70vh; }
+          body .containerPrincipal main .seccionPrincipalContacto .container-fluid form {
+            overflow: scroll;
+            max-height: 70vh;
+            padding: 0.5rem;
+            border: 1px solid #e2e1e1;
+            margin-bottom: 1rem; }
+            body .containerPrincipal main .seccionPrincipalContacto .container-fluid form h4 {
+              text-align: center;
+              margin-bottom: 1rem;
+              font-size: 1rem; }
+            body .containerPrincipal main .seccionPrincipalContacto .container-fluid form .mb-3 label {
+              font-size: 0.900rem; }
+            body .containerPrincipal main .seccionPrincipalContacto .container-fluid form .botonesForm {
+              margin-top: 0.700rem; }
+              body .containerPrincipal main .seccionPrincipalContacto .container-fluid form .botonesForm button {
+                width: 20%;
+                height: 10%;
+                font-size: 0.600rem; }
+    body .containerPrincipal .mainIndex .imgIndexMobile {
+      display: block;
+      width: 100vw; }
+      body .containerPrincipal .mainIndex .imgIndexMobile img {
+        width: 100%; }
     body .containerPrincipal footer {
       grid-area: foo;
-      background-color: #051367;
+      background-color: #02013E;
       display: flex;
       flex-direction: column;
       align-items: stretch;
@@ -132,112 +156,215 @@ body {
       body .containerPrincipal footer h3 {
         font-size: 0.5rem; }
       body .containerPrincipal footer iframe {
-        width: 50%;
-        height: 50%;
-        align-self: center; }
+        width: 45%;
+        height: 45%;
+        align-self: center;
+        overflow: hidden; }
 
 body .containerPrincipal footer h2, body .containerPrincipal footer h3 {
-  font-size: 0.5rem;
+  font-size: 1rem;
   color: antiquewhite;
   font-weight: lighter;
   line-height: 1.5; }
 
-@keyframes foto {
-  from {
-    opacity: 1; }
-  to {
-    opacity: 0; } }
+@media screen and (min-width: 600px) {
+  body .containerPrincipal main .seccionPrincipalContacto {
+    min-height: 31.25rem; }
+    body .containerPrincipal main .seccionPrincipalContacto .container-fluid {
+      min-height: 31.25rem; }
+      body .containerPrincipal main .seccionPrincipalContacto .container-fluid form {
+        margin: 0 auto 0 auto;
+        max-width: 70vw;
+        overflow: visible;
+        min-height: 28.125rem; }
+  body .containerPrincipal main .seccionPrincipalTips article .cf-uno .card {
+    min-height: 35rem; }
+    body .containerPrincipal main .seccionPrincipalTips article .cf-uno .card iframe {
+      max-width: 50vw;
+      min-height: 40vh; }
+  body .containerPrincipal main .seccionPrincipalTres .container-fluid {
+    max-width: 60vw; }
+  body .containerPrincipal .mainIndex .imgIndexMobile {
+    margin: 0 auto 0 auto;
+    max-width: 70vw; } }
 
 @media screen and (min-width: 1024px) {
+  body .contIndex {
+    background-image: url("../multimedia/resized/fondo.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed; }
   body .containerPrincipal {
-    grid-template-areas: "hdr hdr hdr hdr" "nav nav nav nav" "main main main main" "foo foo foo foo";
-    grid-template-rows: 3.12rem 3rem auto 9.37rem;
+    max-width: 100vw;
+    grid-template-areas: "hdr hdr hdr hdr" "main main main main" "foo foo foo foo";
+    grid-template-rows: 4rem 35rem 9.37rem;
     background-color: #ffffff; }
-    body .containerPrincipal header h1 {
-      font-size: 3rem;
-      line-height: 1; }
+    body .containerPrincipal header {
+      width: 100%;
+      grid-area: hdr;
+      position: fixed;
+      top: 0px;
+      padding-top: 0.5rem;
+      padding-bottom: 0.5rem;
+      display: grid;
+      grid-template-areas: "tit menu";
+      grid-template-columns: auto 30rem;
+      background-color: transparent;
+      min-height: 4rem;
+      z-index: 1000; }
+      body .containerPrincipal header h1 {
+        margin-right: 2rem;
+        justify-self: end;
+        display: inline-block;
+        grid-area: tit;
+        font-size: 3rem;
+        line-height: 1; }
+      body .containerPrincipal header #menuGrande {
+        grid-area: menu;
+        display: inline-block; }
+        body .containerPrincipal header #menuGrande .menuPrincipal {
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          align-items: center;
+          margin: 0;
+          list-style-type: none;
+          background-color: transparent;
+          height: 100%;
+          padding: 0; }
+          body .containerPrincipal header #menuGrande .menuPrincipal li {
+            height: 100%;
+            margin: 0 0.5rem 0 0.5rem; }
+            body .containerPrincipal header #menuGrande .menuPrincipal li a {
+              display: inline-block;
+              text-decoration: none;
+              color: #ffffff;
+              text-transform: uppercase;
+              font-weight: bold;
+              font-size: 1rem;
+              height: 100%;
+              line-height: 3;
+              transition: all, 0.3s; }
+              body .containerPrincipal header #menuGrande .menuPrincipal li a:hover {
+                color: #ffff00; }
+    body .containerPrincipal header.headerTextColor {
+      background-color: #ffffff; }
+      body .containerPrincipal header.headerTextColor h1 {
+        color: #02013E; }
+      body .containerPrincipal header.headerTextColor #menuGrande .menuPrincipal li a {
+        color: #02013E; }
+        body .containerPrincipal header.headerTextColor #menuGrande .menuPrincipal li a:hover {
+          color: #ffff00; }
     body .containerPrincipal .barramenu {
       display: none; }
-    body .containerPrincipal #menuGrande {
-      display: block; }
-      body .containerPrincipal #menuGrande .menuPrincipal {
+    body .containerPrincipal .mainIndex {
+      height: 100vmin; }
+      body .containerPrincipal .mainIndex .imgIndexMobile {
+        display: none; }
+    body .containerPrincipal main {
+      grid-area: main;
+      width: 100vw;
+      height: 100vh; }
+      body .containerPrincipal main .whatsapp-icon {
+        bottom: 1.25rem;
+        right: 0.625rem;
+        margin: 0;
+        z-index: 1000; }
+      body .containerPrincipal main .seccionPrincipalTres {
+        width: 50vw;
+        margin: 0 auto 0 auto; }
+        body .containerPrincipal main .seccionPrincipalTres .container-fluid .img-fluid {
+          width: 80%;
+          margin: 0 auto 0 auto; }
+      body .containerPrincipal main .seccionPrincipalNosotros {
+        min-height: 100vh;
+        padding-top: 2rem; }
+        body .containerPrincipal main .seccionPrincipalNosotros .cf-uno {
+          display: none; }
+        body .containerPrincipal main .seccionPrincipalNosotros .cf-dos {
+          margin: 0;
+          padding: 0 1rem 0 1rem;
+          min-height: 80vh;
+          display: block;
+          display: flex;
+          flex-direction: row;
+          justify-content: center; }
+          body .containerPrincipal main .seccionPrincipalNosotros .cf-dos .card {
+            border: none;
+            padding-bottom: 0; }
+            body .containerPrincipal main .seccionPrincipalNosotros .cf-dos .card .row {
+              flex-wrap: nowrap;
+              min-height: 100%;
+              align-content: center; }
+              body .containerPrincipal main .seccionPrincipalNosotros .cf-dos .card .row .col-md-5 img {
+                width: 90%; }
+              body .containerPrincipal main .seccionPrincipalNosotros .cf-dos .card .row .col-md-7 {
+                border: 1px solid black;
+                border-radius: 5px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center; }
+                body .containerPrincipal main .seccionPrincipalNosotros .cf-dos .card .row .col-md-7 .card-body {
+                  display: flex;
+                  flex-direction: column;
+                  justify-content: space-evenly;
+                  align-items: center; }
+                  body .containerPrincipal main .seccionPrincipalNosotros .cf-dos .card .row .col-md-7 .card-body h5 {
+                    justify-self: end; }
+      body .containerPrincipal main .seccionPrincipalTips .cf-uno {
+        display: none; }
+      body .containerPrincipal main .seccionPrincipalTips .cf-dos {
+        margin-top: 3rem;
+        display: block;
         display: flex;
         flex-direction: row;
-        justify-content: center;
-        align-items: center;
-        list-style-type: none;
-        background-color: #051367;
-        border-top: 1px solid #ffffff;
-        height: 100%;
-        padding: 0; }
-        body .containerPrincipal #menuGrande .menuPrincipal li {
-          height: 100%;
-          margin: 0 1.25rem 0 1.25rem; }
-          body .containerPrincipal #menuGrande .menuPrincipal li a {
-            display: inline-block;
-            text-decoration: none;
-            color: #f5f5f5;
-            text-transform: uppercase;
-            font-size: 1rem;
-            height: 100%;
-            line-height: 3;
-            transition: all, 0.3s; }
-            body .containerPrincipal #menuGrande .menuPrincipal li a:hover {
-              color: #ffff00; }
-    body .containerPrincipal main .portadaDos {
-      left: 10.5%; }
-    body .containerPrincipal main .seccionPrincipalTres {
-      width: 50vw;
-      margin: 0 auto 0 auto; }
-      body .containerPrincipal main .seccionPrincipalTres .container-fluid .img-fluid {
-        width: 80%;
-        margin: 0 auto 0 auto; }
-    body .containerPrincipal main .seccionPrincipalNosotros .cf-uno {
-      display: none; }
-    body .containerPrincipal main .seccionPrincipalNosotros .cf-dos {
-      display: block;
-      display: flex;
-      flex-direction: row;
-      justify-content: center; }
-      body .containerPrincipal main .seccionPrincipalNosotros .cf-dos .card .row .col-md-4 img {
-        width: 80%; }
-      body .containerPrincipal main .seccionPrincipalNosotros .cf-dos .card .row .col-md-8 .card-body {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center; }
-    body .containerPrincipal main .seccionPrincipalTips .cf-uno {
-      display: none; }
-    body .containerPrincipal main .seccionPrincipalTips .cf-dos {
-      display: block;
-      display: flex;
-      flex-direction: row;
-      justify-content: center; }
-      body .containerPrincipal main .seccionPrincipalTips .cf-dos .card .row .col-md-5 {
-        position: relative;
-        height: 0;
-        padding-bottom: 30%;
-        overflow: hidden; }
-        body .containerPrincipal main .seccionPrincipalTips .cf-dos .card .row .col-md-5 iframe {
-          position: absolute;
-          top: 0;
-          left: 0;
-          width: 100%;
-          height: 100%; }
-      body .containerPrincipal main .seccionPrincipalTips .cf-dos .card .row .col-md-7 .card-body {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center; }
-    body .containerPrincipal main .seccionPrincipalContacto .container-fluid form {
-      width: 30vw;
-      margin: 1rem auto 2rem auto;
-      padding: 1rem;
-      border: 1px solid #e2e1e1; }
-      body .containerPrincipal main .seccionPrincipalContacto .container-fluid form h4 {
-        text-align: center;
-        margin-bottom: 1rem; }
+        justify-content: center; }
+        body .containerPrincipal main .seccionPrincipalTips .cf-dos .card .row .col-md-5 {
+          position: relative;
+          height: 0;
+          padding-bottom: 28%;
+          overflow: hidden; }
+          body .containerPrincipal main .seccionPrincipalTips .cf-dos .card .row .col-md-5 .video {
+            margin-top: 1.56rem;
+            position: relative;
+            height: 0;
+            overflow: hidden;
+            padding-bottom: 56.2%; }
+            body .containerPrincipal main .seccionPrincipalTips .cf-dos .card .row .col-md-5 .video iframe {
+              position: absolute;
+              top: 0;
+              left: 0;
+              width: 100%;
+              height: 100%; }
+        body .containerPrincipal main .seccionPrincipalTips .cf-dos .card .row .col-md-7 {
+          max-height: 25rem;
+          display: flex;
+          align-content: center; }
+          body .containerPrincipal main .seccionPrincipalTips .cf-dos .card .row .col-md-7 .card-body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center; }
+      body .containerPrincipal main .seccionPrincipalContacto .container-fluid form {
+        overflow: visible;
+        background-color: #02013E;
+        width: 30vw;
+        margin: 1rem auto 2rem auto;
+        padding: 1rem;
+        border: 1px solid #e2e1e1; }
+        body .containerPrincipal main .seccionPrincipalContacto .container-fluid form h4 {
+          color: #ffffff;
+          text-align: center;
+          margin-bottom: 1rem; }
+        body .containerPrincipal main .seccionPrincipalContacto .container-fluid form label {
+          color: #ffffff; }
+        body .containerPrincipal main .seccionPrincipalContacto .container-fluid form .botonesForm {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-around; }
     body .containerPrincipal footer {
+      grid-area: foo;
       display: flex;
       flex-direction: row;
       justify-content: space-evenly;
